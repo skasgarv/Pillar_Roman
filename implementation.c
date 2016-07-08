@@ -90,3 +90,16 @@ char* numberToRoman(int val) {
 	printf("%s", res);
 	return res;
 }
+
+char* romanSubtraction(char number1[1000], char number2[1000]) {
+	int romanTonumber1 = romanToNumber(number1);
+	int romanTonumber2 = romanToNumber(number2);
+
+	if(romanTonumber1<romanTonumber2){
+		return "Roman Numerals cannot be negative. Please provide valid input\n";
+	}
+	int romanDifference = 0;
+	romanDifference = romanTonumber1 - romanTonumber2;
+	char *c = numberToRoman(romanDifference);
+	return c;
+}

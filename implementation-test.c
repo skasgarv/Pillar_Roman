@@ -20,7 +20,7 @@ END_TEST
 START_TEST(testForAdditionOfTwoRomanNumbers)
 {
 #line 8
-	ck_assert_str_eq(romanAddition("II","I"),"II");
+	ck_assert_str_eq(romanAddition("II","I"),"III");
 
 }
 END_TEST
@@ -30,14 +30,21 @@ START_TEST(testForConvertingNumberToRoman)
 #line 11
 	ck_assert_str_eq(numberToRoman(1),"I");
 
-
 }
 END_TEST
 
 START_TEST(testForSubtractionOfTwoRomanNumbers)
 {
-#line 15
+#line 14
 	ck_assert_str_eq(romanSubtraction("II","I"),"I");
+
+}
+END_TEST
+
+START_TEST(testForSubtractionWithSecondNumberbeingGreater)
+{
+#line 17
+	ck_assert_str_eq(romanSubtraction("II","IV"),"Roman Numerals cannot be negative. Please provide valid input\n");
 
 }
 END_TEST
@@ -54,6 +61,7 @@ int main(void)
     tcase_add_test(tc1_1, testForAdditionOfTwoRomanNumbers);
     tcase_add_test(tc1_1, testForConvertingNumberToRoman);
     tcase_add_test(tc1_1, testForSubtractionOfTwoRomanNumbers);
+    tcase_add_test(tc1_1, testForSubtractionWithSecondNumberbeingGreater);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
