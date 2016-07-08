@@ -4,15 +4,38 @@
 #test testForConvertingRomanToNumber
 	ck_assert_int_eq(romanToNumber("I"),1);
 
+#test testforNegativeAssertioninCovertingRomanToNumber
+	ck_assert_int_ne(romanToNumber("I"),2);
+
+
+
 #test testForAdditionOfTwoRomanNumbers
 	ck_assert_str_eq(romanAddition("II","I"),"III");
+
+#test testForNegativeAssertionForAddition
+	ck_assert_str_ne(romanAddition("II","I"),"II");
+
+
 
 #test testForConvertingNumberToRoman
 	ck_assert_str_eq(numberToRoman(1),"I");
 
+#test testforNegativeAssertioninConvertingNumberToRoman
+	ck_assert_str_ne(numberToRoman(1),"II");
+
+
+
 #test testForSubtractionOfTwoRomanNumbers
 	ck_assert_str_eq(romanSubtraction("II","I"),"I");
 
+#test testForNegativeAssertionForSubtraction
+	ck_assert_str_ne(romanSubtraction("II","I"),"II");
+
+
+
 #test testForSubtractionWithSecondNumberbeingGreater
 	ck_assert_str_eq(romanSubtraction("II","IV"),"Roman Numerals cannot be negative. Please provide valid input\n");
+
+
+
 
