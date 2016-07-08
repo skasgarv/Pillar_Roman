@@ -1,0 +1,4 @@
+#include "implementation.h"
+
+#test testForAdditionOfTwoRomanNumbers
+	ck_assert_str_eq(romanAddition("I","I"),"II");
