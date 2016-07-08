@@ -1,4 +1,15 @@
 #include "implementation.h"
 
+
+#test testForConvertingRomanToNumber
+	ck_assert_int_eq(romanToNumber("I"),1);
+
 #test testForAdditionOfTwoRomanNumbers
-	ck_assert_str_eq(romanAddition("I","I"),"II");
+	ck_assert_str_eq(romanAddition("II","I"),"II");
+
+#test testForConvertingNumberToRoman
+	ck_assert_str_eq(numberToRoman(1),"I");
+
+
+
+

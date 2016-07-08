@@ -8,10 +8,37 @@
 #line 1 "implementation-test.check"
 #include "implementation.h"
 
+
+START_TEST(testForConvertingRomanToNumber)
+{
+#line 5
+	ck_assert_int_eq(romanToNumber("I"),1);
+
+}
+END_TEST
+
 START_TEST(testForAdditionOfTwoRomanNumbers)
 {
-#line 4
-	ck_assert_str_eq(romanAddition("I","I"),"II");
+#line 8
+	ck_assert_str_eq(romanAddition("II","I"),"II");
+
+}
+END_TEST
+
+START_TEST(testForConvertingNumberToRoman)
+{
+#line 11
+	ck_assert_str_eq(numberToRoman(1),"I");
+
+
+}
+END_TEST
+
+START_TEST(testForSubtractionOfTwoRomanNumbers)
+{
+#line 15
+	ck_assert_str_eq(romanSubtraction("II","I"),"I");
+
 }
 END_TEST
 
@@ -23,7 +50,10 @@ int main(void)
     int nf;
 
     suite_add_tcase(s1, tc1_1);
+    tcase_add_test(tc1_1, testForConvertingRomanToNumber);
     tcase_add_test(tc1_1, testForAdditionOfTwoRomanNumbers);
+    tcase_add_test(tc1_1, testForConvertingNumberToRoman);
+    tcase_add_test(tc1_1, testForSubtractionOfTwoRomanNumbers);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
