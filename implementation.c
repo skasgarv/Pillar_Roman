@@ -87,19 +87,22 @@ char* numberToRoman(int val) {
 	val = val % 10;
 	strcat(res, ones[val]);
 
-	printf("%s", res);
 	return res;
 }
 
 char* romanSubtraction(char number1[1000], char number2[1000]) {
 	int romanTonumber1 = romanToNumber(number1);
 	int romanTonumber2 = romanToNumber(number2);
+	int romanDifference = 0;
 
 	if(romanTonumber1<romanTonumber2){
-		return "Roman Numerals cannot be negative. Please provide valid input\n";
+		romanDifference = romanTonumber2 - romanTonumber1;
+	}else if(romanTonumber1>romanTonumber2){
+		romanDifference = romanTonumber1 - romanTonumber2;	
+	}else if(romanTonumber1==romanTonumber2){
+		return "nulla";
 	}
-	int romanDifference = 0;
-	romanDifference = romanTonumber1 - romanTonumber2;
+	
 	char *c = numberToRoman(romanDifference);
 	return c;
 }

@@ -34,7 +34,7 @@
 
 
 #test testForSubtractionWithSecondNumberbeingGreater
-	ck_assert_str_eq(romanSubtraction("II","IV"),"Roman Numerals cannot be negative. Please provide valid input\n");
+	ck_assert_str_eq(romanSubtraction("II","IV"),"II");
 
 
 

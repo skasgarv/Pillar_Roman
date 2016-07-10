@@ -66,10 +66,10 @@ int main(void) {
 
 	if (operationValue == 1) {
 		char *c1 = romanAddition(roman_Number1, roman_Number2);
-		printf("\nAddition of %s + %s = %s\n", roman_Number1, roman_Number2, c1);
+		printf("Addition of %s + %s = %s\n", roman_Number1, roman_Number2, c1);
 	} else if (operationValue == 2) {
 		char *c2 = romanSubtraction(roman_Number1, roman_Number2);
-		printf("\nDifference of %s - %s = %s\n", roman_Number1, roman_Number2, c2);
+		printf("Difference of %s - %s = %s\n", roman_Number1, roman_Number2, c2);
 	} else {
 		printf("Invalid Option.\n");
 		printf("\tEnter '1' for Addition\n");
